@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.listi {
+  position: absolute;
+  left: -4rem;
+  top: 3.8rem;
+  font-size: 1rem;
+
+}
+
+.drop-down {
+  display: none;
+}
+
+.profile:hover .drop-down {
+  display: block;
+}
+
+.listi-t {
+  position: absolute;
+  right: 9rem;
+  top: 3.8rem;
+  font-size: 1rem;
+
+}
+
+.drop-down-impact {
+  display: none;
+}
+
+.impact:hover .drop-down-impact {
+  display: block;
+}

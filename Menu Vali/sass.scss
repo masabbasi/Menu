@@ -1,0 +1,241 @@
+$base-color: #dbeafe;
+$white-color: #ffffff;
+$base-shadow: 0px 3px 7px 0px #c8d9dc;
+$black-color: #000000;
+$gray-color: #8b8b8b;
+
+body {
+    
+
+    font-size: 14px;
+    font-family: segoe ui;
+    padding: 3rem;
+}
+
+
+.header {
+    .right-header {
+          & .fa-shopping-cart {
+            &::after {
+
+            }
+        }
+
+        .profile {
+            position: relative;
+            position: relative;
+            height: 100%;
+            padding: .85rem 0;
+
+            .dropdown-menu {
+                width: 7rem;
+                background-color: white;
+                position: absolute;
+                left: -2.5rem;
+                top: 4rem;
+                font-size: 0.7rem;
+                font-weight: 500;
+                box-shadow: $base-shadow;
+                display: none;
+                transition: all linear 0.3s;
+
+                &::before {
+                    content: '';
+                    width: 1rem;
+                    height: 1rem;
+                    position: absolute;
+                    top: -0.3rem;
+                    left: 3rem;
+                    border-radius: 3px;
+                    transform: rotate(45deg);
+                    background-color: $white-color;
+                    z-index: -1;
+                }
+
+                li {
+                    height: 2.5rem;
+                    width: 100%;
+                    padding-left: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    &.logout {
+                        background-color: #ecf3f3;
+                        color: grey;
+                    }
+
+                    &:hover {
+                        background-color: $base-color;
+                        border-top-left-radius: 0.375rem;
+                        border-top-right-radius: 0.375rem;
+                    }
+                }
+            }
+
+            &:hover .dropdown-menu {
+                display: block;
+                animation: show-top 0.6s;
+            }
+        }
+    }
+
+    .nav-bar {
+        .menu {
+            .menu-item {
+                padding: 1.3rem 0;
+                font-weight: 500;
+                color: $gray-color;
+
+                &.dropdown {
+                    position: relative;
+
+                    .dropdown-menu {
+                        position: absolute;
+                        left: -5rem;
+                        top: 4rem;
+                        height: 11rem;
+                        background-color: $white-color;
+                        box-shadow: $base-shadow;
+                        display: none;
+                        transition: all linear 0.3s;
+
+                        &::before {
+                            content: '';
+                            width: 1rem;
+                            height: 1rem;
+                            position: absolute;
+                            top: -0.3rem;
+                            left: 6rem;
+                            border-radius: 3px;
+                            transform: rotate(45deg);
+                            background-color: $white-color;
+                        }
+
+                        &>div {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .right {
+                            background: #008c95 url(https://pnglux.com/wp-content/uploads/2021/02/1612278498_cloud-PNG-image-High-Quality.png) center right/ cover no-repeat;
+                            color: $white-color;
+                            height: 100%;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .left {
+                            height: 100%;
+
+                            .dropdown-items {
+                                .dropdown-item {
+                                    .dropdown-img {
+                                        width: 2.5rem;
+                                        height: 2.5rem;
+                                        border-radius: 50%;
+                                    }
+
+                                    &:hover {
+                                        background-color: $base-color;
+                                        color: $black-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover .dropdown-menu {
+                        display: flex;
+                        animation: show-top 0.6s;
+                    }
+                }
+
+                &:hover {
+                    color: $black-color;
+                }
+            }
+
+        }
+    }
+
+    .hamburger-menu {
+        position: relative;
+
+        &>.dropdown-menu {
+            position: absolute;
+            top: 3.75rem;
+            left: 0;
+            width: 13rem;
+            background-color: $white-color;
+            box-shadow: $base-shadow;
+            display: none;
+
+            &>.dropdown-items {
+                position: relative;
+                padding: 0.8rem 1rem;
+
+                i {
+                    color: $gray-color;
+                }
+
+                &>.dropdown-menu {
+                    position: absolute;
+                    top: 0;
+                    left: 13rem;
+                    width: 10rem;
+                    min-height: 5rem;
+                    background-color: $white-color;
+                    box-shadow: $base-shadow;
+                    display: none;
+
+                    .dropdown-items {
+                        .link {
+                            padding: 0.8rem 1rem;
+                        }
+
+                        &:hover {
+                            background-color: #e2eaee;
+                        }
+
+                        &:hover .sub-title,
+                        &:hover .sub-icon {
+                            color: #1f93e8;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: #e2eaee;
+                }
+
+                &:hover .menu-title,
+                &:hover .menu-icon {
+                    color: #1f93e8;
+                }
+
+                &:hover .dropdown-menu {
+                    display: block;
+                    animation: show-top 0.2s;
+                }
+            }
+        }
+
+        &:hover .dropdown-menu {
+            display: block;
+            animation: show-top 0.2s;
+        }
+    }
+}
+
+@keyframes show-top {
+    from {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
